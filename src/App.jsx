@@ -1,20 +1,22 @@
 import { useState } from "react";
 import styles from "./App.module.css";
 import Home from "./Home.jsx";
+import About from "./About.jsx";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
+    <Router>
       <nav className={styles.navbar}>
         <div className={styles.navLeft}>
-          <span className={styles.siteName}>David Zhu</span>
+          <Link className={styles.siteName} to="/">
+            David Zhu
+          </Link>
         </div>
         <div className={styles.navRight}>
-          <a className={styles.navTab} href="#about">
+          <Link className={styles.navTab} to="/about">
             About
-          </a>
+          </Link>
           <a className={styles.navTab} href="#skills">
             Skills
           </a>
@@ -29,8 +31,11 @@ function App() {
           </a>
         </div>
       </nav>
-      <Home />
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
   );
 }
 

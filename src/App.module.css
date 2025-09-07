@@ -21,6 +21,8 @@
 .siteName {
   font-family: "Inter", sans-serif;
   letter-spacing: 1px;
+  color: #fff;
+  text-decoration: none;
 }
 .navRight {
   display: flex;
