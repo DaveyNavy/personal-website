@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./App.module.css";
 import Home from "./Home.jsx";
 import About from "./About.jsx";
+import Skills from "./Skills.jsx";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router";
 
 function App() {
@@ -17,9 +18,9 @@ function App() {
           <Link className={styles.navTab} to="/about">
             About
           </Link>
-          <a className={styles.navTab} href="#skills">
+          <Link className={styles.navTab} to="/skills">
             Skills
-          </a>
+          </Link>
           <a className={styles.navTab} href="#projects">
             Projects
           </a>
@@ -34,6 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills />} />
       </Routes>
     </Router>
   );

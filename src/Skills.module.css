@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:400,700&display=swap");
+
+.skillsContainer {
+  min-height: 80vh;
+  background: #0a1626;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  padding: 4rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skillsTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.skillsHeadline {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.skillCard {
+  background: #181a1b;
+  border-radius: 16px;
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: border 0.2s, box-shadow 0.2s;
+  border: 2px solid transparent;
+}
+
+.skillIcon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skillName {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .skillsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.2rem;
+  }
+  .skillsContainer {
+    padding: 2rem 0.5rem;
+  }
+}
