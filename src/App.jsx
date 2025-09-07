@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import styles from "./App.module.css";
+import Home from "./Home.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <nav className={styles.navbar}>
+        <div className={styles.navLeft}>
+          <span className={styles.siteName}>David Zhu</span>
+        </div>
+        <div className={styles.navRight}>
+          <a className={styles.navTab} href="#about">
+            About
+          </a>
+          <a className={styles.navTab} href="#skills">
+            Skills
+          </a>
+          <a className={styles.navTab} href="#projects">
+            Projects
+          </a>
+          <a className={styles.navTab} href="#resume">
+            Resume
+          </a>
+          <a className={styles.navTab} href="#contact">
+            Contact
+          </a>
+        </div>
+      </nav>
+      <Home />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

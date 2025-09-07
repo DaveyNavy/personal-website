@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:400,700&display=swap");
+
+.blinkingCursor {
+  display: inline-block;
+  width: 1ch;
+  color: #2563eb;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.homeContainer {
+  min-height: 100vh;
+  background: #0a1626;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  padding: 0 2rem;
+}
+
+.homeContent {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hello {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.resumeBtn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.resumeBtn:hover {
+  background: #1e429f;
+}
+
+.contactBtn {
+  background: transparent;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.contactBtn:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+.socialRow {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.socialIcon {
+  background: #1e293b;
+  color: #fff;
+  border-radius: 8px;
+  width: 50px;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+.socialIcon:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+.homeImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4rem;
+}
+
+.homeImage {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 8px solid #2563eb;
+  object-fit: cover;
+  background: #1e293b;
+}
+
+@media (max-width: 900px) {
+  .homeContainer {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+  .homeImageContainer {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+}

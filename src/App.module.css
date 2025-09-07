@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:400,700&display=swap");
+
+/* Navigation Bar Styles */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #181a1b;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.navLeft {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.siteName {
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1px;
+}
+.navRight {
+  display: flex;
+  gap: 2rem;
+}
+.navTab {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+.navTab:hover {
+  background: #282c34;
+  color: #61dafb;
+}
