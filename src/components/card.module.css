@@ -1,0 +1,79 @@
+.cardOuter {
+  display: flex;
+  align-items: center;
+  background: #181a1b;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  max-width: 1100px;
+  width: 100%;
+  padding: 2.5rem 2rem;
+  gap: 3rem;
+}
+
+.cardImageContainer {
+  flex: 1 1 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardImage {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+  background: #23272f;
+}
+
+.cardContent {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.cardType {
+  color: #ef476f;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.cardName {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.cardDescription {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.cardArrow {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #ef476f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ef476f;
+  font-size: 2rem;
+  margin-top: 20px;
+  transition: background 0.2s, color 0.2s;
+}
+.cardArrow:hover {
+  background: #ef476f;
+  color: #fff;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
