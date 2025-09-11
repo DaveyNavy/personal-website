@@ -2,21 +2,22 @@ import styles from "./Home.module.css";
 import GithubIcon from "./assets/github.svg";
 import LinkedinIcon from "./assets/linkedin.svg";
 import EmailIcon from "./assets/email.svg";
+import Profile from "./assets/David_Headshot_Square.jpg";
 import { useState, useEffect } from "react";
 
 const icons = [
   {
-    href: "#",
+    href: "https://github.com/DaveyNavy",
     label: "GitHub",
     svg: GithubIcon,
   },
   {
-    href: "#",
+    href: "https://www.linkedin.com/in/david-zhu-717863298/",
     label: "LinkedIn",
     svg: LinkedinIcon,
   },
   {
-    href: "#",
+    href: "mailto:davidyzhu2@gmail.com",
     label: "Email",
     svg: EmailIcon,
   },
@@ -48,11 +49,12 @@ export default function Home() {
           <span className={styles.blinkingCursor}>|</span>
         </div>
         <div className={styles.description}>
-          Dynamic and results-oriented Software Engineer with over 5 years of
-          experience specializing in architecting scalable solutions and leading
-          transformative projects. Proven track record of diagnosing complex
-          challenges, delivering innovative solutions, and fostering
-          collaborative team environments.
+          Welcome to my personal website! I'm currently a student at UCLA,
+          majoring in Computer Science with a minor in Mathematics. My interests
+          are mainly in backend development, including databases, CI/CD, and
+          distributed systems, but I also enjoy reading about artificial
+          intelligence and do game development in my free time. Check out some
+          of the projects I've worked on!
         </div>
         <div className={styles.buttonRow}>
           <button className={styles.resumeBtn}>Download Resume</button>
@@ -71,7 +73,9 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.homeImageContainer}>
-        <div className={styles.homeImage}></div>
+        <div className={styles.homeImage}>
+          <img src={Profile} className={styles.profileImg} alt="Profile" />
+        </div>
       </div>
     </div>
   );
