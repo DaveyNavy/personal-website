@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 const icons = [
   {
-    href: "https://github.com/DaveyNavy",
+    href: "#",
     label: "GitHub",
     svg: GithubIcon,
   },
@@ -57,7 +57,14 @@ export default function Home() {
           of the projects I've worked on!
         </div>
         <div className={styles.buttonRow}>
-          <button className={styles.resumeBtn}>Download Resume</button>
+          <a
+            href="/assets/Resume_David_Zhu.pdf"
+            download="Resume_David_Zhu.pdf"
+            className={styles.resumeBtn}
+            style={{ textDecoration: "none", display: "inline-block" }}
+          >
+            Download Resume
+          </a>
           <button className={styles.contactBtn}>Contact Me</button>
         </div>
         <div className={styles.socialRow}>
