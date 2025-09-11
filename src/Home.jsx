@@ -3,7 +3,7 @@ import GithubIcon from "./assets/github.svg";
 import LinkedinIcon from "./assets/linkedin.svg";
 import EmailIcon from "./assets/email.svg";
 import { useState, useEffect } from "react";
-// You can replace these SVGs with icon components or images as needed
+
 const icons = [
   {
     href: "#",
