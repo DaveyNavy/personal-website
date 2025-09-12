@@ -1,3 +1,23 @@
+@media (max-width: 600px) {
+  .cardOuter {
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.3rem 0.1rem 0.6rem 0.1rem;
+  }
+  .cardImage {
+    max-width: 100%;
+    margin-bottom: 0.1rem;
+    margin-top: 0;
+  }
+  .cardContent {
+    gap: 0.3rem;
+    align-items: flex-start;
+  }
+
+  .cardImageContainer {
+    flex: 1 1 250px !important;
+  }
+}
 .cardOuter {
   display: flex;
   align-items: center;

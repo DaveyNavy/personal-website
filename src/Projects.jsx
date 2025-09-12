@@ -1,12 +1,8 @@
 import styles from "./Projects.module.css";
-import {
-  FaArrowUpRightFromSquare,
-  FaChevronLeft,
-  FaChevronRight,
-} from "react-icons/fa6";
-import { useState, useRef, useEffect } from "react";
 import Carousel from "./components/carousel.jsx";
 import Chrysalis from "./assets/chrysalis.png";
+import Pool from "./assets/pool.png";
+import Juncture from "./assets/juncture.png";
 
 const projects = [
   {
@@ -19,19 +15,19 @@ const projects = [
   },
   {
     type: "Web App",
-    name: "Sample Project 2",
+    name: "Juncture",
     description:
-      "This is a sample project for demonstration. Replace with your own projects!",
-    image: "https://placehold.co/600x400/222/fff?text=Project+2",
-    link: "#",
+      "Juncture simplifies the college club hunt through a familiar swipe-and-match format, encouraging students to step our of their rooms and explore the world. Juncture was a full stack web app made using React, Node.js, Express, and MongoDB, and was built in 36 hours for UCLA's LA Hacks hackathon.",
+    image: Juncture,
+    link: "https://devpost.com/software/juncture",
   },
   {
-    type: "Mobile App",
-    name: "Sample Project 3",
+    type: "Website / Game",
+    name: "Pool Party",
     description:
-      "Another example project. Add as many as you like to the carousel.",
-    image: "https://placehold.co/600x400/333/fff?text=Project+3",
-    link: "#",
+      "A classic pool game with custom graphics and physics made using Javascript and Three.JS. Fully custom shaders, lighting, and graphics rendering replicate a realistic 3D environment.",
+    image: Pool,
+    link: "https://github.com/rachjn/bowling-bonanza",
   },
 ];
 
