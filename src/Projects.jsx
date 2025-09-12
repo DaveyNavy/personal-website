@@ -1,8 +1,49 @@
 import styles from "./Projects.module.css";
 import Carousel from "./components/carousel.jsx";
+import ProjectScroll from "./components/project-scroll.jsx";
 import Chrysalis from "./assets/chrysalis.png";
 import Pool from "./assets/pool.png";
 import Juncture from "./assets/juncture.png";
+
+const gameProjects = [
+  {
+    name: "Chrysalis",
+    image: Chrysalis,
+    description:
+      "A 2D puzzle-platformer game made in Unity and C#, with a creative core mechanic and 10 distinct levels. Winner of 3rd place at UCLA's game jam.",
+    link: "https://vlad-the-inhaler.itch.io/chrysalis",
+    tags: ["Unity", "C#", "Game Design"],
+  },
+  {
+    name: "Pool Party",
+    description:
+      "A classic pool game with custom graphics and physics made using Javascript and Three.JS. Features realistic 3D environment.",
+    link: "https://github.com/rachjn/bowling-bonanza",
+    tags: ["Three.js", "JavaScript", "WebGL"],
+  },
+];
+
+const websiteProjects = [
+  {
+    name: "Personal Website",
+    description:
+      "A responsive portfolio website built with React and modern CSS, featuring smooth animations and a clean design.",
+    link: "https://github.com/DaveyNavy/personal-website",
+    tags: ["React", "CSS Modules", "Vite"],
+  },
+  {
+    name: "Project 2",
+    description: "Description for Project 2",
+    link: "#",
+    tags: ["Tag1", "Tag2", "Tag3"],
+  },
+  {
+    name: "Project 3",
+    description: "Description for Project 3",
+    link: "#",
+    tags: ["Tag1", "Tag2"],
+  },
+];
 
 const projects = [
   {
@@ -39,6 +80,18 @@ export default function Projects() {
         Explore My Popular <span className={styles.highlight}>Projects</span>
       </div>
       <Carousel projects={projects}></Carousel>
+      <ProjectScroll
+        projects={websiteProjects}
+        title="WEBSITES"
+        subtitle="My Web Development Projects"
+        highlight="Development"
+      />
+      <ProjectScroll
+        projects={gameProjects}
+        title="GAMES"
+        subtitle="My Game Development Projects"
+        highlight="Development"
+      />
     </div>
   );
 }
