@@ -6,15 +6,16 @@ import {
 } from "react-icons/fa6";
 import { useState, useRef, useEffect } from "react";
 import Carousel from "./components/carousel.jsx";
+import Chrysalis from "./assets/chrysalis.png";
 
 const projects = [
   {
-    type: "Website / CMS",
-    name: "Mount Kenya Wildlife Conservancy (MKWC)",
+    type: "Game",
+    name: "Chrysalis",
     description:
-      "A non-profit trust dedicated to preserving the environment and the wildlife within. For 20 years, the MKWC has served as a beacon of conservation, preserving and protecting nature's beauty and wildlife for present and future generations.",
-    image: "https://i.imgur.com/4M34hi2.png",
-    link: "#",
+      "A 2D puzzle-platformer game made in Unity and C#, with a creative core mechanic and 10 distinct levels. Made in 72 hours for UCLA's Fiat Ludum game jam, Chrysalis took 3rd place out of 30 teams.",
+    image: Chrysalis,
+    link: "https://vlad-the-inhaler.itch.io/chrysalis",
   },
   {
     type: "Web App",

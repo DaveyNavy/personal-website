@@ -33,7 +33,7 @@
 }
 
 .cardType {
-  color: #ef476f;
+  color: #2563eb;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
@@ -57,18 +57,19 @@
 .cardArrow {
   width: 48px;
   height: 48px;
-  border: 2px solid #ef476f;
+  border: 2px solid #2563eb;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ef476f;
+  color: #2563eb;
   font-size: 2rem;
   margin-top: 20px;
   transition: background 0.2s, color 0.2s;
 }
 .cardArrow:hover {
-  background: #ef476f;
+  background: #2563eb;
+
   color: #fff;
 }
 .card {

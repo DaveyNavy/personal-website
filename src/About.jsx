@@ -1,7 +1,5 @@
 import styles from "./About.module.css";
-import GithubIcon from "./assets/github.svg";
-import LinkedinIcon from "./assets/linkedin.svg";
-import EmailIcon from "./assets/email.svg";
+import { FaCheckCircle } from "react-icons/fa";
 
 const aboutList = [
   "Develop highly interactive Front end / User Interfaces for the web",
@@ -10,12 +8,6 @@ const aboutList = [
   "Integration of payment services such as M-Pesa and paypal etc",
   "Develop highly interactive Mobile Applications",
   "Develop highly interactive Backend / API services",
-];
-
-const socials = [
-  { href: "#", icon: GithubIcon, label: "GitHub" },
-  { href: "#", icon: LinkedinIcon, label: "LinkedIn" },
-  { href: "#", icon: EmailIcon, label: "Email" },
 ];
 
 export default function About() {
@@ -42,22 +34,19 @@ export default function About() {
         <ul className={styles.aboutList}>
           {aboutList.map((item, i) => (
             <li className={styles.aboutListItem} key={i}>
-              <img className={styles.aboutListIcon} />
+              <FaCheckCircle
+                className={styles.aboutListIcon}
+                style={{
+                  color: "#2563eb",
+                  marginRight: 12,
+                  fontSize: "1.2em",
+                  verticalAlign: "middle",
+                }}
+              />
               {item}
             </li>
           ))}
         </ul>
-        <div className={styles.aboutSocialRow}>
-          {socials.map((s, i) => (
-            <a key={i} href={s.href} aria-label={s.label}>
-              <img
-                className={styles.aboutSocialIcon}
-                src={s.icon}
-                alt={s.label}
-              />
-            </a>
-          ))}
-        </div>
       </div>
     </div>
   );
