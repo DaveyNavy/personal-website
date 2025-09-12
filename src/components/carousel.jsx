@@ -1,20 +1,43 @@
 import Card from "./card";
 import styles from "./carousel.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 export default function Carousel({ projects }) {
-  const width = 800;
   const n = projects.length;
-  const [slide, setSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [containerWidth, setContainerWidth] = useState(800);
 
-  function next() {
-    setSlide((slide - 1) % n);
-  }
+  useEffect(() => {
+    const updateWidth = () => {
+      const container = document.querySelector(`.${styles.container}`);
+      if (container) {
+        setContainerWidth(container.offsetWidth);
+      }
+    };
 
-  function prev() {
-    setSlide(slide + 1 > 0 ? -n + 1 : slide + 1);
-  }
+    updateWidth();
+    const resizeObserver = new ResizeObserver(updateWidth);
+    const container = document.querySelector(`.${styles.container}`);
+    if (container) {
+      resizeObserver.observe(container);
+    }
+
+    return () => {
+      if (container) {
+        resizeObserver.unobserve(container);
+      }
+      resizeObserver.disconnect();
+    };
+  }, []);
+
+  const next = () => {
+    setCurrentSlide((prev) => (prev + 1) % n);
+  };
+
+  const prev = () => {
+    setCurrentSlide((prev) => (prev - 1 + n) % n);
+  };
 
   return (
     <>
@@ -27,9 +50,18 @@ export default function Carousel({ projects }) {
           <FaChevronLeft />
         </button>
         <div className={styles.container}>
-          <div className={styles.slides} style={{ left: slide * width + "px" }}>
+          <div
+            className={styles.slides}
+            style={{
+              transform: `translateX(${-currentSlide * 100}%)`,
+            }}
+          >
             {projects.map((e, i) => {
-              return <Card info={e} key={i}></Card>;
+              return (
+                <div key={i} className={styles.slide}>
+                  <Card info={e} />
+                </div>
+              );
             })}
           </div>
         </div>

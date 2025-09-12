@@ -9,11 +9,36 @@ import Contact from "./Contact.jsx";
 function scrollToSection(id) {
   const el = document.getElementById(id);
   if (el) {
-    el.scrollIntoView({ behavior: "smooth" });
+    const navHeight = document.querySelector("nav").offsetHeight;
+    const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({
+      top: elementPosition - navHeight,
+      behavior: "smooth",
+    });
   }
 }
 
+import { useState, useEffect } from "react";
+
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 700);
+      if (window.innerWidth > 700) setMenuOpen(false);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  function handleNavClick(id) {
+    scrollToSection(id);
+    setMenuOpen(false);
+  }
+
   return (
     <>
       <nav className={styles.navbar}>
@@ -23,19 +48,37 @@ function App() {
             href="#home"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection("home");
+              handleNavClick("home");
             }}
           >
             David Zhu
           </a>
         </div>
-        <div className={styles.navRight}>
+        {isMobile && (
+          <div
+            className={styles.hamburger}
+            onClick={(e) => {
+              e.stopPropagation();
+              setMenuOpen((open) => !open);
+            }}
+          >
+            <div className={styles.hamburgerBar}></div>
+            <div className={styles.hamburgerBar}></div>
+            <div className={styles.hamburgerBar}></div>
+          </div>
+        )}
+        <div
+          className={`${styles.navRight} ${isMobile ? styles.mobileNav : ""} ${
+            isMobile && menuOpen ? styles.open : ""
+          }`}
+          onClick={() => setMenuOpen(false)}
+        >
           <a
             className={styles.navTab}
             href="#about"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection("about");
+              handleNavClick("about");
             }}
           >
             About
@@ -45,7 +88,7 @@ function App() {
             href="#skills"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection("skills");
+              handleNavClick("skills");
             }}
           >
             Skills
@@ -55,7 +98,7 @@ function App() {
             href="#projects"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection("projects");
+              handleNavClick("projects");
             }}
           >
             Projects
@@ -65,7 +108,7 @@ function App() {
             href="#resume"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection("resume");
+              handleNavClick("resume");
             }}
           >
             Resume
@@ -75,7 +118,7 @@ function App() {
             href="#contact"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection("contact");
+              handleNavClick("contact");
             }}
           >
             Contact

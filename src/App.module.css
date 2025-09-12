@@ -1,5 +1,89 @@
 @import url("https://fonts.googleapis.com/css?family=Inter:400,700&display=swap");
 
+/* Utility class to hide on desktop, show on mobile */
+.hideOnDesktop {
+  display: none;
+}
+@media (max-width: 700px) {
+  .hideOnDesktop {
+    display: flex;
+  }
+}
+
+/* Mobile Responsive Navbar */
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: row;
+    padding: 1rem 1.5rem;
+    justify-content: center;
+    position: relative;
+  }
+  .navLeft {
+    position: absolute;
+    left: 1.5rem;
+  }
+  .mobileNav {
+    display: none !important;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #181a1b;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 200;
+    padding: 0.5rem 0;
+    align-items: center;
+    text-align: center;
+  }
+  .mobileNav.open {
+    display: flex !important;
+  }
+  .navTab {
+    padding: 1rem 1.5rem;
+    border-radius: 0;
+    border: none;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 0.2rem 0;
+    transition: all 0.2s ease;
+  }
+  .navTab:hover {
+    background: rgba(97, 218, 251, 0.1);
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 300;
+    padding: 8px;
+    margin: -8px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+  }
+  .hamburger:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .hamburgerBar {
+    width: 24px;
+    height: 2px;
+    background: #fff;
+    margin: 2px 0;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+}
+
+html {
+  scroll-padding-top: 80px; /* Fallback for browsers that don't support scroll-margin */
+}
+
 html,
 body,
 #root {
@@ -8,6 +92,17 @@ body,
   background: #0a1626;
   margin: 0;
   padding: 0;
+}
+
+/* Section containers */
+#home,
+#about,
+#skills,
+#projects,
+#resume,
+#contact {
+  scroll-margin-top: 80px;
+  padding-top: 1rem;
 }
 
 /* Navigation Bar Styles */
