@@ -1,35 +1,11 @@
 import Card from "./card";
 import styles from "./carousel.module.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 export default function Carousel({ projects }) {
   const n = projects.length;
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [containerWidth, setContainerWidth] = useState(800);
-
-  useEffect(() => {
-    const updateWidth = () => {
-      const container = document.querySelector(`.${styles.container}`);
-      if (container) {
-        setContainerWidth(container.offsetWidth);
-      }
-    };
-
-    updateWidth();
-    const resizeObserver = new ResizeObserver(updateWidth);
-    const container = document.querySelector(`.${styles.container}`);
-    if (container) {
-      resizeObserver.observe(container);
-    }
-
-    return () => {
-      if (container) {
-        resizeObserver.unobserve(container);
-      }
-      resizeObserver.disconnect();
-    };
-  }, []);
 
   const next = () => {
     setCurrentSlide((prev) => (prev + 1) % n);
