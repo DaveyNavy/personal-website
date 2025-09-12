@@ -65,7 +65,17 @@ export default function Home() {
           >
             Download Resume
           </a>
-          <button className={styles.contactBtn}>Contact Me</button>
+          <a
+            href="#contact"
+            className={styles.contactBtn}
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById("contact");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            Contact Me
+          </a>
         </div>
         <div className={styles.socialRow}>
           {icons.map((icon, i) => (
