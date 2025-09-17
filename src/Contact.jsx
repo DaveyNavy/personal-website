@@ -9,19 +9,24 @@ export default function Contact() {
       <div className={styles.contactGrid}>
         <div className={styles.contactCard}>
           <div className={styles.iconWrapper}>
-            <img src="/src/assets/email.svg" alt="Email" className={styles.contactIcon} />
+            <img
+              src="/src/assets/email.svg"
+              alt="Email"
+              className={styles.contactIcon}
+            />
           </div>
           <h3 className={styles.contactMethod}>Email</h3>
-          <a 
-            href="mailto:davidyzhu2@gmail.com" 
-            className={styles.contactLink}
-          >
+          <a href="mailto:davidyzhu2@gmail.com" className={styles.contactLink}>
             davidyzhu2@gmail.com
           </a>
         </div>
         <div className={styles.contactCard}>
           <div className={styles.iconWrapper}>
-            <img src="/src/assets/linkedin.svg" alt="LinkedIn" className={styles.contactIcon} />
+            <img
+              src="/src/assets/linkedin.svg"
+              alt="LinkedIn"
+              className={styles.contactIcon}
+            />
           </div>
           <h3 className={styles.contactMethod}>LinkedIn</h3>
           <a
@@ -35,7 +40,11 @@ export default function Contact() {
         </div>
         <div className={styles.contactCard}>
           <div className={styles.iconWrapper}>
-            <img src="/src/assets/github.svg" alt="GitHub" className={styles.contactIcon} />
+            <img
+              src="/src/assets/github.svg"
+              alt="GitHub"
+              className={styles.contactIcon}
+            />
           </div>
           <h3 className={styles.contactMethod}>GitHub</h3>
           <a

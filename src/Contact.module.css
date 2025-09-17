@@ -88,17 +88,17 @@
   .contactContainer {
     padding: 2rem 1rem;
   }
-  
+
   .contactTitle {
     font-size: 2rem;
     margin-bottom: 2rem;
   }
-  
+
   .contactGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .contactCard {
     padding: 1.5rem;
   }
