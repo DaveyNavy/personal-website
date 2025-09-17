@@ -127,7 +127,7 @@ export default function Projects() {
       <Carousel projects={projects}></Carousel>
       <ProjectScroll
         projects={websiteProjects}
-        title="APPS/WEBSITES"
+        title="APPS / WEBSITES"
         subtitle="My Web Development Projects"
         highlight="Development"
       />

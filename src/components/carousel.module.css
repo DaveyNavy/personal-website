@@ -1,17 +1,46 @@
 @media (max-width: 800px) {
   .carousel {
-    gap: 0.5rem;
+    padding: 0 0.5rem;
   }
   .container {
-    min-height: 220px;
+    min-height: auto;
+    margin: 0.5rem 0;
+    width: 100%;
   }
   .button {
-    width: 38px;
-    height: 38px;
-    font-size: 1.5rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(24, 26, 27, 0.9);
+  }
+  .button:first-child {
+    left: 1rem;
+  }
+  .button:last-child {
+    right: 1rem;
   }
   .slide {
+    padding: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .carousel {
     padding: 0 0.25rem;
+  }
+  .button {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+  .button:first-child {
+    left: 0.5rem;
+  }
+  .button:last-child {
+    right: 0.5rem;
   }
 }
 .carousel {
@@ -20,6 +49,7 @@
   gap: 1rem;
   width: 100%;
   justify-content: center;
+  position: relative;
 }
 
 .container {
@@ -59,6 +89,7 @@
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  z-index: 10;
 }
 .button:hover:enabled {
   background: #2563eb;

@@ -1,21 +1,59 @@
 @media (max-width: 800px) {
   .cardOuter {
     flex-direction: column;
-    gap: 0.2rem;
-    padding: 0.3rem 0.1rem 0.6rem 0.1rem;
+    gap: 1rem;
+    padding: 1rem;
   }
   .cardImage {
     max-width: 100%;
-    margin-bottom: 0.1rem;
+    margin-bottom: 0;
     margin-top: 0;
+    border-radius: 12px;
   }
   .cardContent {
-    gap: 0.3rem;
+    gap: 0.5rem;
     align-items: flex-start;
+    padding: 0 0.5rem;
   }
 
   .cardImageContainer {
-    flex: 1 1 200px !important;
+    flex: 0 0 auto;
+  }
+
+  .cardName {
+    font-size: 1.5rem;
+  }
+
+  .cardDescription {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .cardOuter {
+    padding: 0.75rem;
+  }
+  
+  .cardContent {
+    padding: 0 0.25rem;
+  }
+
+  .cardType {
+    font-size: 0.9rem;
+  }
+
+  .cardName {
+    font-size: 1.25rem;
+  }
+
+  .cardDescription {
+    font-size: 0.95rem;
+  }
+
+  .cardArrow {
+    width: 40px;
+    height: 40px;
+    margin-top: 0.5rem;
   }
 }
 .cardOuter {
@@ -28,6 +66,7 @@
   width: 100%;
   padding: 2.5rem 2rem;
   gap: 3rem;
+  min-width: 0;
 }
 
 .cardImageContainer {
@@ -35,6 +74,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 0;
 }
 
 .cardImage {
@@ -43,6 +83,7 @@
   border-radius: 16px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
   background: #23272f;
+  object-fit: cover;
 }
 
 .cardContent {
