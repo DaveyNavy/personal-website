@@ -15,12 +15,14 @@
   .navbar {
     flex-direction: row;
     padding: 1rem 1.5rem;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
   }
   .navLeft {
-    position: absolute;
-    left: 1.5rem;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
   }
   .mobileNav {
     display: none !important;

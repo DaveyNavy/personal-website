@@ -3,10 +3,14 @@ import Carousel from "./components/carousel.jsx";
 import ProjectScroll from "./components/project-scroll.jsx";
 import Chrysalis from "./assets/chrysalis.png";
 import Pool from "./assets/pool.png";
-import Juncture from "./assets/juncture.png";
+import Juncture from "./assets/juncture.jpg";
+import JunctureWide from "./assets/juncture.png";
 import Kitchen from "./assets/kitchen.png";
 import Faithless from "./assets/faithless.png";
 import Massature from "./assets/massature.png";
+import BeBetter from "./assets/bebetter.png";
+import ForkedRepos from "./assets/forkedrepos.png";
+import Studio from "./assets/studio.png";
 
 const gameProjects = [
   {
@@ -53,23 +57,36 @@ const gameProjects = [
 
 const websiteProjects = [
   {
-    name: "Personal Website",
+    name: "ACM Studio Website",
+    image: Studio,
     description:
-      "A responsive portfolio website built with React and modern CSS, featuring smooth animations and a clean design.",
-    link: "https://github.com/DaveyNavy/personal-website",
-    tags: ["React", "CSS Modules", "Vite"],
+      "The public website for UCLA's ACM Studio, the premier student-run club for game development on campus. Showcases the studio's projects, team members, and events.",
+    link: "https://studio.uclaacm.com/",
+    tags: ["React", "Typescript", "MUI"],
   },
   {
-    name: "Project 2",
-    description: "Description for Project 2",
-    link: "#",
-    tags: ["Tag1", "Tag2", "Tag3"],
+    name: "BeBetter",
+    image: BeBetter,
+    description:
+      "Transform your personal accountability into gambling with friends. Track tasks, earn rewards, and bet on friends to achieve your goals in a fun, (slightly) supportive community.",
+    link: "https://devpost.com/software/bebetter-56hf7i",
+    tags: ["React", "PostgreSQL", "Express.JS", "AWS"],
   },
   {
-    name: "Project 3",
-    description: "Description for Project 3",
-    link: "#",
-    tags: ["Tag1", "Tag2"],
+    name: "Juncture",
+    image: Juncture,
+    description:
+      "Juncture simplifies the college club hunt through a familiar swipe-and-match format, encouraging students to step our of their rooms and explore the world. Juncture was a full stack web app made using React, Node.js, and Django, and was built in 36 hours for UCLA's LA Hacks hackathon.",
+    link: "https://devpost.com/software/juncture",
+    tags: ["React", "Django", "Javascript", "Typescript"],
+  },
+  {
+    name: "Forked Repos",
+    image: ForkedRepos,
+    description:
+      "Forked Repos is a website designed for users to conveniently find and share their favorite recipes. With dynamic search and filtering and an intuitive UI, it guarentees that you can find your next meal tailored to your specific preferences.",
+    link: "https://github.com/DaveyNavy/Forked-Repos",
+    tags: ["React", "PostgreSQL", "Javascript", "Express.JS"],
   },
 ];
 
@@ -86,8 +103,8 @@ const projects = [
     type: "Web App",
     name: "Juncture",
     description:
-      "Juncture simplifies the college club hunt through a familiar swipe-and-match format, encouraging students to step our of their rooms and explore the world. Juncture was a full stack web app made using React, Node.js, Express, and MongoDB, and was built in 36 hours for UCLA's LA Hacks hackathon.",
-    image: Juncture,
+      "Juncture simplifies the college club hunt through a familiar swipe-and-match format, encouraging students to step our of their rooms and explore the world. Juncture was a full stack web app made using React, Node.js, and Django, and was built in 36 hours for UCLA's LA Hacks hackathon.",
+    image: JunctureWide,
     link: "https://devpost.com/software/juncture",
   },
   {
