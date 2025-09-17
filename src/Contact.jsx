@@ -1,4 +1,7 @@
 import styles from "./Contact.module.css";
+import emailIcon from "./assets/email.svg";
+import linkedinIcon from "./assets/linkedin.svg";
+import githubIcon from "./assets/github.svg";
 
 export default function Contact() {
   return (
@@ -10,7 +13,7 @@ export default function Contact() {
         <div className={styles.contactCard}>
           <div className={styles.iconWrapper}>
             <img
-              src="/src/assets/email.svg"
+              src={emailIcon}
               alt="Email"
               className={styles.contactIcon}
             />
@@ -23,7 +26,7 @@ export default function Contact() {
         <div className={styles.contactCard}>
           <div className={styles.iconWrapper}>
             <img
-              src="/src/assets/linkedin.svg"
+              src={linkedinIcon}
               alt="LinkedIn"
               className={styles.contactIcon}
             />
@@ -41,7 +44,7 @@ export default function Contact() {
         <div className={styles.contactCard}>
           <div className={styles.iconWrapper}>
             <img
-              src="/src/assets/github.svg"
+              src={githubIcon}
               alt="GitHub"
               className={styles.contactIcon}
             />

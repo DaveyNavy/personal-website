@@ -73,7 +73,7 @@ function App() {
           }`}
           onClick={() => setMenuOpen(false)}
         >
-          <a
+          {/* <a
             className={styles.navTab}
             href="#about"
             onClick={(e) => {
@@ -82,6 +82,16 @@ function App() {
             }}
           >
             About
+          </a> */}
+          <a
+            className={styles.navTab}
+            href="#projects"
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavClick("projects");
+            }}
+          >
+            Projects
           </a>
           <a
             className={styles.navTab}
@@ -92,16 +102,6 @@ function App() {
             }}
           >
             Skills
-          </a>
-          <a
-            className={styles.navTab}
-            href="#projects"
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavClick("projects");
-            }}
-          >
-            Projects
           </a>
           <a
             className={styles.navTab}
@@ -128,14 +128,11 @@ function App() {
       <div id="home">
         <Home />
       </div>
-      <div id="about">
-        <About />
+      <div id="projects">
+        <Projects />
       </div>
       <div id="skills">
         <Skills />
-      </div>
-      <div id="projects">
-        <Projects />
       </div>
       <div id="resume">
         <Resume />
