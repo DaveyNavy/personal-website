@@ -4,22 +4,50 @@ import ProjectScroll from "./components/project-scroll.jsx";
 import Chrysalis from "./assets/chrysalis.png";
 import Pool from "./assets/pool.png";
 import Juncture from "./assets/juncture.png";
+import Kitchen from "./assets/kitchen.png";
+import Faithless from "./assets/faithless.png";
+import Massature from "./assets/massature.png";
 
 const gameProjects = [
   {
     name: "Chrysalis",
     image: Chrysalis,
     description:
-      "A 2D puzzle-platformer game made in Unity and C#, with a creative core mechanic and 10 distinct levels. Winner of 3rd place at UCLA's game jam.",
+      "A 2D puzzle-platformer game made in Unity and C#, with a creative core mechanic and 10 distinct levels. Winner of 3rd place at UCLA's Fiat Ludum game jam.",
     link: "https://vlad-the-inhaler.itch.io/chrysalis",
-    tags: ["Unity", "C#", "Game Design"],
+    tags: ["Unity", "C#"],
+  },
+  {
+    name: "Faithless",
+    image: Faithless,
+    description:
+      "A 3D FPS adventure game made in Unreal Engine 5, with completely custom assets and environments. Featuring varied enemies and a boss level, Faithless was made over 6 months with a team of 10+ UCLA students.",
+    link: "https://jomnaq.itch.io/faithless",
+    tags: ["Unreal Engine", "C++", "3D Modeling"],
   },
   {
     name: "Pool Party",
+    image: Pool,
     description:
-      "A classic pool game with custom graphics and physics made using Javascript and Three.JS. Features realistic 3D environment.",
+      "A classic pool game with custom graphics and physics made using Javascript and Three.JS. Features custom realistic 3D environment.",
     link: "https://github.com/rachjn/bowling-bonanza",
     tags: ["Three.js", "JavaScript", "WebGL"],
+  },
+  {
+    name: "Hell's Kitchen",
+    image: Kitchen,
+    description:
+      "A fast-paced multitasking game where players smash bugs and prevent food from spoiling. Made in 72 hours for Ludum Dare 56.",
+    link: "  https://vlad-the-inhaler.itch.io/hells-kitchen",
+    tags: ["Unity", "C#"],
+  },
+  {
+    name: "Massature",
+    image: Massature,
+    description:
+      "A 2D side-scrolling platformer featuring a core shape-shifting mechanic to complete puzzle-based levels. ",
+    link: "http://vlad-the-inhaler.itch.io/mass",
+    tags: ["Unity", "C#"],
   },
 ];
 
