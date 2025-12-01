@@ -2,6 +2,7 @@ import styles from "./Projects.module.css";
 import Carousel from "./components/carousel.jsx";
 import ProjectScroll from "./components/project-scroll.jsx";
 import Chrysalis from "./assets/chrysalis.png";
+import Homunculus from "./assets/homunculus.png";
 import Pool from "./assets/pool.png";
 import Juncture from "./assets/juncture.jpg";
 import JunctureWide from "./assets/juncture.png";
@@ -19,6 +20,14 @@ const gameProjects = [
     description:
       "A 2D puzzle-platformer game made in Unity and C#, with a creative core mechanic and 10 distinct levels. Winner of 3rd place at UCLA's Fiat Ludum game jam.",
     link: "https://vlad-the-inhaler.itch.io/chrysalis",
+    tags: ["Unity", "C#"],
+  },
+  {
+    name: "Homunculus",
+    image: Homunculus,
+    description:
+      "A 2D top-down roguelike dungeon crawler made in Unity for Ludum Dare 58. Ranked 85th natonally out of 1000+ entries.",
+    link: "https://jomnaq.itch.io/homunculus",
     tags: ["Unity", "C#"],
   },
   {
